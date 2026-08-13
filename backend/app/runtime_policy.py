@@ -1,7 +1,7 @@
-"""Backend-owned policy for every provider adapter and tenant."""
+"""Backend-owned policy for provider adapters and tenant isolation."""
 from __future__ import annotations
 import os
-from typing import Any, Optional
+from typing import Any
 from fastapi import HTTPException
 from app.config import settings
 
@@ -14,26 +14,25 @@ TOOL_LIMITS = {
 }
 
 def resolve_tenant_id(body: dict[str, Any], message: dict[str, Any]) -> str:
-    metadata = message.get("assistant", {}).get("metadata", {}) if isinstance(message.get("assistant"), dict) else {}
+    assistant = message.get("assistant") if isinstance(message.get("assistant"), dict) else {}
+    metadata = assistant.get("metadata") if isinstance(assistant.get("metadata"), dict) else {}
     tenant_id = body.get("tenantId") or metadata.get("tenantId")
+    deployment_key = body.get("deploymentKey") or metadata.get("deploymentKey")
+    if deployment_key:
+        matches = [tid for tid, config in settings.tenants.items() if getattr(config, "deployment_key", None) == deployment_key]
+        if len(matches) != 1:
+            raise HTTPException(status_code=403, detail="Unknown or ambiguous deployment identity")
+        if tenant_id and tenant_id != matches[0]:
+            raise HTTPException(status_code=403, detail="Tenant does not match deployment identity")
+        tenant_id = matches[0]
     if not tenant_id and os.getenv("APP_ENV", "development") == "development":
         tenant_id = os.getenv("DEFAULT_TENANT_ID", "observe-insurance")
     if not tenant_id or tenant_id not in settings.tenants:
         raise HTTPException(status_code=400, detail="A valid trusted tenant context is required")
+    if os.getenv("APP_ENV", "development") == "production" and not deployment_key:
+        raise HTTPException(status_code=403, detail="Production calls require a deployment identity")
     return tenant_id
 
 def assert_tool_allowed(name: str) -> None:
     if name in BACKEND_ONLY_TOOLS:
         raise HTTPException(status_code=400, detail=f"{name} is backend-owned and cannot be called by the live assistant")
-
-def termination_reason(ended_reason: str) -> str:
-    value = (ended_reason or "").lower()
-    if "silence" in value or "inactiv" in value:
-        return "customer_silence"
-    if "quota" in value or "error" in value or "failed" in value:
-        return "provider_error"
-    if "max" in value or "duration" in value:
-        return "provider_max_duration"
-    if "customer" in value or "hangup" in value or "ended" in value:
-        return "customer_hangup"
-    return "unknown"

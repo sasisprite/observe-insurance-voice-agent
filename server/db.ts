@@ -90,3 +90,57 @@ export async function getUserByOpenId(openId: string) {
 }
 
 // TODO: add feature queries here as your schema grows.
+
+const localTenantAgentConfigs = new Map<string, TenantAgentConfigInput & { version: number }>();
+
+export type TenantAgentConfigInput = {
+  tenantId: string;
+  agentName: string;
+  systemPrompt: string;
+  firstMessage: string;
+  settings: Record<string, unknown>;
+  tools: unknown[];
+};
+
+export async function getTenantAgentConfig(tenantId: string) {
+  const db = await getDb();
+  if (!db) return localTenantAgentConfigs.get(tenantId);
+  const { desc } = await import("drizzle-orm");
+  const { tenantAgentConfigs } = await import("../drizzle/schema");
+  const result = await db.select().from(tenantAgentConfigs).where(eq(tenantAgentConfigs.tenantId, tenantId)).orderBy(desc(tenantAgentConfigs.version)).limit(1);
+  const row = result[0];
+  if (!row) return undefined;
+  return {
+    tenantId: row.tenantId,
+    version: row.version,
+    agentName: row.agentName,
+    systemPrompt: row.systemPrompt,
+    firstMessage: row.firstMessage,
+    settings: JSON.parse(row.settingsJson || "{}"),
+    tools: JSON.parse(row.toolsJson || "[]"),
+  };
+}
+
+export async function saveTenantAgentConfig(input: TenantAgentConfigInput) {
+  const db = await getDb();
+  if (!db) {
+    const value = { persisted: false, ...input, version: (localTenantAgentConfigs.get(input.tenantId)?.version || 0) + 1 };
+    localTenantAgentConfigs.set(input.tenantId, value);
+    return value;
+  }
+  const { max } = await import("drizzle-orm");
+  const { tenantAgentConfigs } = await import("../drizzle/schema");
+  const existing = await db.select({ version: max(tenantAgentConfigs.version) }).from(tenantAgentConfigs).where(eq(tenantAgentConfigs.tenantId, input.tenantId));
+  const version = Number(existing[0]?.version || 0) + 1;
+  await db.insert(tenantAgentConfigs).values({
+    tenantId: input.tenantId,
+    version,
+    agentName: input.agentName,
+    systemPrompt: input.systemPrompt,
+    firstMessage: input.firstMessage,
+    settingsJson: JSON.stringify(input.settings),
+    toolsJson: JSON.stringify(input.tools),
+    published: 1,
+  });
+  return { persisted: true, ...input, version };
+}

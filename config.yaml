@@ -57,6 +57,7 @@ voice:
 tenants:
   observe-insurance:
     tenant_id: "observe-insurance"
+    deployment_key: "observe-insurance-dev"
     organization_name: "Observe Insurance"
     agent_name: "Sarah"
     first_message: "Hi, you've reached Observe Insurance — I'm Sarah. What can I help you with today?"

@@ -16,8 +16,11 @@ from app.repository import repo
 from app.tools import execute_tool
 from app.audit import audit_logger
 from app.provider import validate_and_build_vapi_config
+from providers import get_voice_provider
 from app.streaming import event_generator
 from app.runtime_policy import TOOL_LIMITS, assert_tool_allowed, resolve_tenant_id
+from app.observability import Timer, log_event, metrics
+from app.resilience import run_bounded
 
 app = FastAPI(title="Observe Insurance FastAPI LangGraph Voice Agent", version="2.1.0")
 
@@ -100,6 +103,7 @@ def _execute_vapi_tool(tenant_id: str, call_id: Optional[str], name: str, argume
         _purge_expired_tool_results(now)
         cached = _tool_result_cache.get(cache_key)
         if cached:
+            metrics.increment("voice_tool_replays", tool=name, tenant=tenant_id)
             return cached[1], True
         if call_id:
             attempt_key = (call_id, name)
@@ -108,7 +112,15 @@ def _execute_vapi_tool(tenant_id: str, call_id: Optional[str], name: str, argume
                 return {"status": "tool_budget_exhausted", "authenticated": False, "message": "This operation has reached its attempt limit. Escalation or an alternate channel is required."}, False
             _tool_attempts[attempt_key] = _tool_attempts.get(attempt_key, 0) + 1
 
-    result = execute_tool(tenant_id, name, arguments)
+    timer = Timer("voice_tool_latency_seconds", tool=name, tenant=tenant_id)
+    try:
+        result = run_bounded(f"tool:{name}", lambda: execute_tool(tenant_id, name, arguments), timeout_seconds=8.0)
+        metrics.increment("voice_tool_success", tool=name, tenant=tenant_id)
+    except TimeoutError:
+        result = {"status": "tool_timeout", "authenticated": False, "message": "The requested system did not respond in time."}
+        metrics.increment("voice_tool_timeout", tool=name, tenant=tenant_id)
+    finally:
+        timer.stop()
     with _tool_result_cache_lock:
         _tool_result_cache[cache_key] = (now + settings.server.vapi_tool_dedup_ttl_seconds, result)
     return result, False
@@ -122,6 +134,10 @@ def health_check():
         "tenantsLoaded": len(cfg.tenants),
         "defaultTenant": "observe-insurance",
     }
+
+@app.get("/api/metrics")
+def metrics_snapshot():
+    return metrics.snapshot()
 
 @app.get("/api/voice-agent/health")
 def voice_agent_health():
@@ -152,7 +168,7 @@ def get_tenants():
 @app.get("/api/voice-agent/config/{tenant_id}")
 def get_tenant_vapi_config(tenant_id: str, origin: Optional[str] = "http://localhost:3000"):
     try:
-        cfg = validate_and_build_vapi_config(tenant_id, origin)
+        cfg = get_voice_provider("vapi").build_assistant_config(tenant_id, origin)
         return {"tenantId": tenant_id, "vapiConfig": cfg}
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
@@ -169,6 +185,7 @@ def dispatch_tools(req: ToolCallRequest):
     tenant_id = resolve_tenant_id(body, message)
     call_id = body.get("callId") or message.get("call", {}).get("id")
 
+    metrics.increment("voice_tool_requests", tool=body.get("toolName") or "batch", tenant=tenant_id)
     audit_logger.log_event("tool_dispatch_request", tenant_id, body, call_id)
 
     if message.get("type") == "tool-calls":
@@ -212,6 +229,8 @@ def receive_event(req: dict):
     tenant_id = resolve_tenant_id(req, msg)
     call_id = req.get("callId") or msg.get("call", {}).get("id")
     event_type = msg.get("type") or req.get("type") or "unknown"
+    metrics.increment("voice_events_received", event_type=event_type, tenant=tenant_id)
+    log_event("provider_event_received", tenant_id=tenant_id, call_id=call_id, event_type=event_type)
     audit_logger.log_event(event_type, tenant_id, msg, call_id)
 
     # Vapi delivers end-of-call-report server-side even when the browser has died, so

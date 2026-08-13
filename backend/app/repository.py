@@ -1,6 +1,7 @@
 import json
 import re
 import time
+import os
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -222,4 +223,14 @@ class DatabaseRepository:
 
         return {"logged": True, "record": record}
 
-repo = DatabaseRepository()
+def build_repository():
+    database_url = os.getenv("DATABASE_URL")
+    mode = os.getenv("VOICE_REPOSITORY", "sql" if os.getenv("APP_ENV") == "production" else "json")
+    if mode == "sql":
+        if not database_url:
+            raise RuntimeError("DATABASE_URL is required when VOICE_REPOSITORY=sql")
+        from app.sql_repository import SqlRepository
+        return SqlRepository(database_url)
+    return DatabaseRepository()
+
+repo = build_repository()

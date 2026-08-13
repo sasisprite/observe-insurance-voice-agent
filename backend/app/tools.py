@@ -132,6 +132,7 @@ def execute_tool(tenant_id: str, tool_name: str, args: dict) -> dict:
         return repo.verify_record(tenant_id, normalized.get("normalizedIdentifier") or identifier, iso_date)
 
     if tool_name == "log_interaction":
+        raise HTTPException(status_code=400, detail="log_interaction is backend-owned")
         record = {
             "callerName": args.get("callerName", "Unknown Caller"),
             "callSummary": args.get("callSummary", "No summary provided"),

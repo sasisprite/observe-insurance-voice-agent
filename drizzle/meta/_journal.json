@@ -8,6 +8,13 @@
       "when": 1786550048169,
       "tag": "0000_pale_silk_fever",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1786625804678,
+      "tag": "0001_voice_agent_core",
+      "breakpoints": true
     }
   ]
 }

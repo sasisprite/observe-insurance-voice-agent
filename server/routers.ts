@@ -5,6 +5,8 @@ import { publicProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import { loadConfig } from "./configLoader";
 import { callFastApi } from "./fastApiBackend";
+import { getTenantAgentConfig, saveTenantAgentConfig } from "./db";
+import { loginAdmin, verifyAdminToken } from "./adminAuth";
 
 type FastApiTenant = {
   tenantId: string;
@@ -37,6 +39,25 @@ export const appRouter = router({
     }),
   }),
 
+  admin: router({
+    login: publicProcedure.input(z.object({ username: z.string(), password: z.string() })).mutation(({ input }) => {
+      const token = loginAdmin(input.username, input.password);
+      if (!token) throw new Error("Invalid admin credentials");
+      return { token };
+    }),
+    getAgentConfig: publicProcedure.input(z.object({ token: z.string(), tenantId: z.string() })).query(async ({ input }) => {
+      if (!verifyAdminToken(input.token)) throw new Error("Admin authentication required");
+      const stored = await getTenantAgentConfig(input.tenantId);
+      if (stored) return stored;
+      const config = loadConfig().tenants[input.tenantId];
+      if (!config) throw new Error("Unknown tenant");
+      return { tenantId: input.tenantId, version: 0, agentName: config.agent_name, systemPrompt: config.system_prompt, firstMessage: config.first_message || "", settings: config, tools: config.tools };
+    }),
+    saveAgentConfig: publicProcedure.input(z.object({ token: z.string(), tenantId: z.string(), agentName: z.string().min(1), systemPrompt: z.string().min(1), firstMessage: z.string().min(1), settings: z.record(z.string(), z.unknown()), tools: z.array(z.unknown()) })).mutation(async ({ input }) => {
+      if (!verifyAdminToken(input.token)) throw new Error("Admin authentication required");
+      return saveTenantAgentConfig(input);
+    }),
+  }),
   voiceAgent: router({
     getTenants: publicProcedure.query(() => fetchTenants()),
 

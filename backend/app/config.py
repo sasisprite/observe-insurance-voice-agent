@@ -67,6 +67,7 @@ class ToolDef(BaseModel):
 
 class TenantConfig(BaseModel):
     tenant_id: str
+    deployment_key: Optional[str] = None
     organization_name: str
     agent_name: str = "Sarah"
     first_message: Optional[str] = None

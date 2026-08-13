@@ -167,25 +167,27 @@ def _as_number(token: str) -> Optional[int]:
 
 
 def _parse_year(text: str) -> Optional[int]:
-    numeric = re.search(r"\b(\d{4})\b", text or "")
+    value = (text or "").strip().lower().replace("’", "'")
+    abbreviated = re.fullmatch(r"'?([0-9]{2})", value)
+    if abbreviated:
+        year = int(abbreviated.group(1))
+        return 1900 + year if year >= 30 else 2000 + year
+
+    numeric = re.search(r"\b(\d{4})\b", value)
     if numeric:
         return int(numeric.group(1))
 
-    words = [w for w in re.split(r"[\s,-]+", (text or "").lower()) if w]
+    words = [w for w in re.split(r"[\s,-]+", value.lstrip("'")) if w]
     if words and words[0] in ("nineteen", "twenty") and len(words) <= 3:
         suffix = _parse_number_words(" ".join(words[1:]))
         if suffix is not None and 0 <= suffix <= 99:
             return (1900 if words[0] == "nineteen" else 2000) + suffix
 
-    # Transcribers split a spoken year into two numbers: "nineteen eighty-eight"
-    # comes back as "19 88", and "two thousand five" as "20 05". Without this the
-    # date is unreadable and verification fails even though the caller said it fine.
     if len(words) == 2:
         century, remainder = _as_number(words[0]), _as_number(words[1])
         if century in (19, 20) and remainder is not None and 0 <= remainder <= 99:
             return century * 100 + remainder
     return None
-
 
 def _parse_day(text: str) -> Optional[int]:
     compact = re.sub(r"[^a-z0-9 ]", "", (text or "").lower()).strip()

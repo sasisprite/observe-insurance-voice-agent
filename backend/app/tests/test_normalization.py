@@ -311,3 +311,11 @@ class TestSchemaEchoArguments:
             "verificationFactor": "November 20 19 88",
         })
         assert verified["authenticated"] is True
+
+@pytest.mark.parametrize("spoken", [
+    "November 20, '88",
+    "November 20 88",
+    "November twentieth, '88",
+])
+def test_normalize_date_accepts_abbreviated_spoken_year(spoken):
+    assert normalize_date(spoken) == "1988-11-20"

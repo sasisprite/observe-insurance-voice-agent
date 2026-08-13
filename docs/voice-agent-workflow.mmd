@@ -1,0 +1,29 @@
+flowchart LR
+  Caller[Caller] --> Vapi[Vapi Voice Provider\nSTT + LLM + TTS]
+  Vapi --> Browser[React/Vite Session UI]
+  Browser -->|client messages\ntranscript + tool activity| Session[Session Reducer\nstatus + transcript + timers]
+  Vapi -->|tool calls| Public[Stable HTTPS Ingress\nCloudflare or cloud load balancer]
+  Vapi -->|end-of-call report| Public
+  Public --> API[FastAPI Runtime]
+  API --> Identity[Trusted Tenant /\nDeployment Resolver]
+  API --> Budget[Tool Gateway\nvalidation + budgets + timeout\nretry + circuit breaker]
+  Budget --> Tools[Domain Tools\nnormalize identifier\nlookup customer\nverify identity]
+  Tools --> Repo{Repository Adapter}
+  Repo --> JSON[JSON Fixtures\nlocal development]
+  Repo --> SQL[MySQL / TiDB\nproduction]
+  API --> Ledger[Canonical Call +\nEvent Ledger]
+  API --> Outcome[Call Outcome\nstatus + reason + linkage  API --> Outcome[Call Outcome\nstatus + reason + lin+ owner]
+  Admin[Tenant Admin\n/admin] --> Config[Tenant Config\nprompt + tools + policy + version]
+  Config --> SQL
+  Config --> Provider[Provider Adapter Factory]
+  Provider --> Vapi
+  Outcome --> Metrics[Structured Metrics\nlatency + errors + funnel]
+
+  classDef provider fill:#e5e7eb,stroke:#4b5563,color:#111827;
+  classDef runtime fill:#dbeafe,stroke:#2563eb,color:#111827;
+  classDef data fill:#dcfce7,stroke:#16a34a,color:#111827;
+  classDef control fill:#fef3c7,stroke:#d97706,color:#111827;
+  class Vapi,Public provider;
+  class API,Identity,Budget,Tools,Session,Provider runtime;
+  class Repo,JSON,SQL,Ledger,Outcome,Handoff,Metrics data;
+  class Admin,Config control;

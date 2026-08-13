@@ -144,8 +144,13 @@ function assistantPayload(tenant, config, toolIds) {
       language: stt.language,
       endpointing: config.voice?.endpointing_ms ?? 500,
     },
+    // Browser-visible events drive the transcript and tool-activity panel.
+    clientMessages: ["transcript", "status-update", "tool-calls", "tool-calls-result"],
     serverMessages: ["status-update", "end-of-call-report", "tool-calls"],
     server: { url: `${publicServerUrl}/api/voice-agent/events` },
+    // End completed conversations after the configured goodbye message.
+    endCallFunctionEnabled: true,
+    endCallMessage: config.voice?.goodbye_message || "Thanks for calling. Have a great day.",
     maxDurationSeconds: config.server?.timeout_seconds ?? 600,
   };
 }

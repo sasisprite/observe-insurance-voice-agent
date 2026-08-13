@@ -1,0 +1,42 @@
+{
+  "calls": [
+    {
+      "callId": "019ffa98-d437-755f-8474-faf0002b02cf",
+      "tenantId": "observe-insurance",
+      "outcome": "completed",
+      "reason": "The caller was verified and received their claim status.",
+      "needsHumanFollowUp": false,
+      "priority": "none",
+      "endedReason": "silence-timed-out",
+      "authenticated": true,
+      "authFailures": 0,
+      "answerDelivered": true,
+      "escalationRequested": false,
+      "customerName": "Eleanor Vance",
+      "customerId": "CUST-10042",
+      "claimId": "CLM-55412",
+      "lastCallerUtterance": "I think that's pretty much it for now.",
+      "turnCount": 15,
+      "endedAt": "2026-08-13T10:11:26.620000+00:00"
+    },
+    {
+      "callId": "019ffaa2-42a8-744b-aab3-568113ea1720",
+      "tenantId": "observe-insurance",
+      "outcome": "dropped_after_auth",
+      "reason": "The caller was verified but the call ended before the agent delivered the claim status.",
+      "needsHumanFollowUp": true,
+      "priority": "high",
+      "endedReason": "customer-ended-call",
+      "authenticated": true,
+      "authFailures": 0,
+      "answerDelivered": false,
+      "escalationRequested": false,
+      "customerName": "Eleanor Vance",
+      "customerId": "CUST-10042",
+      "claimId": "CLM-55412",
+      "lastCallerUtterance": "Date of birth is November 20 19 88.",
+      "turnCount": 7,
+      "endedAt": "2026-08-13T10:20:09.043000+00:00"
+    }
+  ]
+}

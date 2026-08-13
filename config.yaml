@@ -1,0 +1,181 @@
+server:
+  port: 3000
+  host: "0.0.0.0"
+  timeout_seconds: 600
+  vapi_tool_dedup_ttl_seconds: 15
+  max_json_body_size: "50mb"
+
+paths:
+  database: "server/database.json"
+  call_log: "server/call-log.json"
+  tool_log: "server/tool-call-log.json"
+  event_log: "server/voice-event-log.jsonl"
+
+llm:
+  provider: "openrouter"
+  model: "openai/gpt-4o-mini"
+  temperature: 0.2
+  max_tokens: 1024
+  api_base_url: "https://openrouter.ai/api/v1"
+  # The provider/model Vapi runs during the live call. Vapi holds the credential for
+  # this one, so it must be a provider enabled on the Vapi account (no BYOK).
+  # gpt-4o replaces llama-3.3-70b, which repeatedly sent JSON-schema text as tool
+  # arguments instead of the caller's words.
+  assistant_provider: "openai"
+  assistant_model: "gpt-4o"
+
+voice:
+  connect_timeout_seconds: 20
+  connect_timeout_warning_seconds: 5
+  inactivity_prompt_after_seconds: 10
+  inactivity_timeout_seconds: 20
+  inactivity_prompt_message: "I haven't heard back. Are you still there, or would you like me to continue?"
+  inactivity_timeout_message: "I'm going to end this call because I haven't heard a response. Thanks for calling."
+  goodbye_message: "Thanks for calling Observe Insurance. Have a great day."
+  goodbye_delay_ms: 900
+  endpointing_ms: 500
+  default_provider: "vapi"
+  transcriber:
+    provider: "deepgram"
+    model: "nova-2"
+    language: "en-US"
+  # Change tts.provider/voice_id here to move off an exhausted provider quota; no
+  # client code edit is needed. Whichever provider is named must have a key attached
+  # in the Vapi dashboard, otherwise the call runs against Vapi's shared allocation.
+  #
+  # voice_id must be one of Vapi's built-in ids exactly as spelled in the SDK:
+  #   Elliot, Rohan, Lily, Savannah, Leah, Tara
+  # Spencer, Neha, Harry, Cole, Paige, Hana, Kylie were retired 2026-03-01.
+  # `version: 2` opts into the newer generation the dashboard labels "savannah-v2".
+  # If a call is ever rejected as an invalid voice, drop `version` first.
+  tts:
+    provider: "vapi"
+    voice_id: "Savannah"
+    version: 2
+    speed: 1.05
+
+tenants:
+  observe-insurance:
+    tenant_id: "observe-insurance"
+    organization_name: "Observe Insurance"
+    agent_name: "Sarah"
+    first_message: "Hi, you've reached Observe Insurance — I'm Sarah. What can I help you with today?"
+    system_prompt: >-
+      You are Sarah, the AI Claims Support Agent for Observe Insurance.
+
+      VOICE AND ENERGY. You are upbeat, quick, and confident — a sharp support rep who
+      likes getting people answers fast. This is claims support, not a hospital ward:
+      do not be hushed, solemn, or over-soothing. Be warm and human, but keep the pace
+      up and get to the point. Never over-apologise. One or two short sentences per
+      turn, always. Vary your wording — never use the same acknowledgement twice in a
+      row, and do not pad with filler like "just a moment" or "this will take a sec"
+      more than once in a call.
+
+      HOW YOU TALK. Short, natural affirmations then straight into the next step:
+      "Got it." / "Perfect." / "Alright, found you." Ask exactly one question at a time
+      and wait for the full answer. Never recite everything you need up front. If the
+      caller stumbles or corrects themselves, take the corrected version without
+      commenting on it. Do not narrate that you are looking something up — call the
+      tool and speak once you have the answer. Never say the same sentence twice in
+      one call.
+
+      TOOL ARGUMENTS — THIS IS CRITICAL. Argument values must be the caller's actual
+      words. Never send a field name, a description of the field, or an example as the
+      value. If the caller said "plus 1 triple 5 2 3 4 5 6 7 8", then rawIdentifier is
+      exactly "plus 1 triple 5 2 3 4 5 6 7 8" — not "phone number or account ID", not
+      "normalizedIdentifier returned by normalize_identifier". For begin_tenant_lookup,
+      identifier is the literal string from the normalizedIdentifier field of the
+      previous result, such as "+1 (555) 234-5678". If a tool reports that you sent a
+      description instead of a value, immediately retry with the caller's real words —
+      do not ask the caller to repeat themselves, because they already told you.
+
+      FLOW. Start by asking only for their phone number or account ID. As soon as they
+      give it, call normalize_identifier with their words exactly as spoken — never
+      reformat, clean up, or spell out the number yourself, the tool does that. If it
+      returns ok=true, call begin_tenant_lookup with normalizedIdentifier. If it
+      returns ok=false, ask them to repeat just the number.
+      When begin_tenant_lookup returns verification_required, ask only for their date
+      of birth, then call verify_tenant_record with the same identifier and the date
+      exactly as they said it. On success, lead with the claim status, then give the
+      single most useful next step. Do not read out the whole record.
+
+      RULES. Never invent customer, policy, or claim details — every fact comes from a
+      tool result. If begin_tenant_lookup returns not_found, say the account did not
+      match and ask for the identifier again; do not ask for date of birth. If
+      verification returns unreadable_verification, ask for the date once more as
+      month, day, and year. After two failed verification attempts, offer a human
+      agent. If the caller asks for a representative, hand off immediately without
+      pushing back. If someone describes an emergency in progress, tell them to contact
+      emergency services first.
+    auth_config:
+      required_identifier_label: "phone number or customer ID"
+      required_verification_label: "date of birth (YYYY-MM-DD)"
+      max_attempts: 2
+    faqs:
+      - question: "What are your office hours?"
+        answer: "Our support offices are open Monday through Friday, 8:00 AM to 6:00 PM Eastern Time."
+      - question: "What is your mailing address for document submissions?"
+        answer: "You can mail physical documents to: Observe Insurance Claims Processing, P.O. Box 4420, Hartford, CT 06101."
+      - question: "How do I start a new claim?"
+        answer: "You can start a new claim instantly online through our customer portal or by speaking with our intake team during regular business hours."
+      - question: "What is the general claims process?"
+        answer: "Once a claim is filed, it undergoes initial review within 24 hours, followed by document verification, adjuster evaluation, and settlement approval."
+    tools:
+      - name: "normalize_identifier"
+        description: >-
+          Convert the caller's spoken phone number or account ID into the canonical form used for lookup.
+          Call this immediately after the caller gives an identifier, and before begin_tenant_lookup.
+          Pass the caller's words through verbatim — the backend does the interpretation, including
+          spoken digits, 'double'/'triple' repeats, country-code phrases, and letter-by-letter account
+          IDs. Do not clean up, reformat, or guess at the value yourself.
+          Returns ok=true with normalizedIdentifier, or ok=false with a reason: when ok is false,
+          ask the caller to repeat only the identifier and call this tool again.
+        parameters:
+          type: "object"
+          properties:
+            rawIdentifier:
+              type: "string"
+              # Kept short and example-only on purpose: verbose, instructional parameter
+              # descriptions get echoed back verbatim as the argument value by smaller
+              # tool-calling models.
+              description: "e.g. plus 1 triple 5 2 3 4 5 6 7 8"
+          required:
+            - rawIdentifier
+      - name: "begin_tenant_lookup"
+        description: >-
+          Find the customer account matching an identifier. Call this immediately after
+          normalize_identifier returns ok=true, passing normalizedIdentifier verbatim.
+          Send the identifier only — never send or ask for the date of birth at this step.
+          Returns status='verification_required' with the customer's name and customerId when an
+          account matches; ask for the date of birth next.
+          Returns status='not_found' when nothing matches; tell the caller the account was not
+          matched and ask for the identifier again. Never proceed to verification after not_found.
+        parameters:
+          type: "object"
+          properties:
+            identifier:
+              type: "string"
+              description: "e.g. +1 (555) 234-5678"
+          required:
+            - identifier
+      - name: "verify_tenant_record"
+        description: >-
+          Authenticate the matched caller with their date of birth and return their claim details.
+          Call only after begin_tenant_lookup returned status='verification_required'.
+          Pass the same identifier used for begin_tenant_lookup, plus the date of birth as the
+          caller said it — the backend interprets spoken dates, so do not reformat it yourself.
+          Returns status='success' with claim details on a match; status='auth_failure' when the date
+          does not match (offer escalation after two failures); status='unreadable_verification' when
+          the date could not be interpreted (ask the caller to repeat month, day, and year).
+        parameters:
+          type: "object"
+          properties:
+            identifier:
+              type: "string"
+              description: "e.g. +1 (555) 234-5678"
+            verificationFactor:
+              type: "string"
+              description: "e.g. November 20 19 88"
+          required:
+            - identifier
+            - verificationFactor

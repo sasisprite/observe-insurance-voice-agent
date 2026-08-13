@@ -1,0 +1,351 @@
+{
+  "tenants": {
+    "observe-insurance": {
+      "customers": [
+        {
+          "customerId": "CUST-10042",
+          "fullName": "Eleanor Vance",
+          "phoneNumber": "+15552345678",
+          "verificationFactor": "1988-11-20",
+          "policyNumber": "POL-998823-01",
+          "claimId": "CLM-55412",
+          "claimStatus": "Under Review",
+          "claimStage": "Document Verification",
+          "requiredDocuments": [
+            "Signed repair estimate",
+            "Photos of windshield damage"
+          ],
+          "adjusterName": "Marcus Brody",
+          "lastUpdated": "2026-08-10T14:30:00Z"
+        },
+        {
+          "customerId": "CUST-10088",
+          "fullName": "Arthur Pendelton",
+          "phoneNumber": "+15559876543",
+          "verificationFactor": "1975-04-12",
+          "policyNumber": "POL-441102-09",
+          "claimId": "CLM-88120",
+          "claimStatus": "Approved",
+          "claimStage": "Payment Processing",
+          "requiredDocuments": [],
+          "adjusterName": "Sarah Jenkins",
+          "lastUpdated": "2026-08-11T09:15:00Z"
+        }
+      ]
+    }
+  },
+  "interactions": [
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Test Caller",
+      "callSummary": "Caller requested a human representative.",
+      "sentiment": "concerned",
+      "escalated": true,
+      "timestamp": "2026-08-13T06:45:00.000Z"
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Test Caller",
+      "callSummary": "Caller requested a human representative.",
+      "sentiment": "concerned",
+      "escalated": true,
+      "timestamp": "2026-08-13T06:45:00.000Z"
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Test Caller",
+      "callSummary": "Caller requested a human representative.",
+      "sentiment": "concerned",
+      "escalated": true,
+      "timestamp": "2026-08-13T06:45:00.000Z"
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Test Caller",
+      "callSummary": "Caller requested a human representative.",
+      "sentiment": "concerned",
+      "escalated": true,
+      "timestamp": "2026-08-13T06:45:00.000Z"
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Test Caller",
+      "callSummary": "Caller requested a human representative.",
+      "sentiment": "concerned",
+      "escalated": true,
+      "timestamp": "2026-08-13T06:45:00.000Z"
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Test Caller",
+      "callSummary": "Caller requested a human representative.",
+      "sentiment": "concerned",
+      "escalated": true,
+      "timestamp": "2026-08-13T06:45:00.000Z"
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Test Caller",
+      "callSummary": "Caller requested a human representative.",
+      "sentiment": "concerned",
+      "escalated": true,
+      "timestamp": "2026-08-13T06:45:00.000Z"
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Consolidation check",
+      "callSummary": "Verified single write path.",
+      "sentiment": "neutral",
+      "escalated": false,
+      "timestamp": "2026-08-13T08:25:32.795Z"
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Browser caller",
+      "callSummary": "assistant: Hello. I'm Sarah. assistant: The Observe Insurance AI claims support agent. assistant: I'm here to help with your claim or answer a general question. assistant: How may I support you today? user: Can you help me with my client status? assistant: I'd be happy to help you with your client status. assistant: To look up your information, could you please tell me your phone number or account ID? user: Our phone number is plus 1 triple 5 2 3 4 5 6 7 8. assistant: Just a sec. Give me a moment. assistant: I've located your account. To verify your identity, could you please tell me your date of birth? user: It's November 20 19 88. assistant: Give me a moment. assistant: 1 moment. assistant: I'm having a bit of trouble verifying your date of birth. assistant: Could you please repeat your date of birth, including the month, day, and year? user: November 20 19 88. assistant: 1 moment. assistant: This will just take a sec. assistant: I'm having a bit of trouble verifying your date of birth. assistant: Could you please repeat your date of birth, month, day, and year?",
+      "sentiment": "not-assessed",
+      "escalated": false,
+      "timestamp": "2026-08-13T09:25:33.476Z"
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Browser caller",
+      "callSummary": "assistant: Hi. You've reached Observe Insurance. assistant: I'm Sarah. What can I help you with today? user: I need help checking my recent claim status. assistant: 1 moment. assistant: To check your claim status, I need your phone number or account ID. assistant: Can you please provide that? user: My phone number is user: plus 1 triple 5 2 3 4 5 6 7 8. assistant: Give me a moment. assistant: Hold on a sec. assistant: Let's try again. Can you please repeat your phone number or account ID? user: Phone number is plus 1 triple 5, 2 3 4 5 6 7 8. assistant: 1 moment. assistant: This will just take a sec. assistant: Let's try again. Can you please repeat your phone number or account ID?",
+      "sentiment": "not-assessed",
+      "escalated": false,
+      "timestamp": "2026-08-13T09:33:18.416Z"
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Browser caller",
+      "callSummary": "assistant: Hi. You've reached Observe Insurance. assistant: I'm Sarah. What can I help you with today? user: Can you help trace my recent claim? assistant: Absolutely. assistant: Could you please provide your phone number or account ID? user: My phone number is user: plus 1 triple 5 user: 2 3 4 5 6 7 8. assistant: 1 moment. assistant: Could you please repeat your phone number or account ID for me? user: My phone number is plus 1 triple 5 2 3 4 5 6 7 8. assistant: Give me a moment. assistant: It seems there's an issue with the system processing your phone number. assistant: Let me connect you to a human agent for further assistance. Hang tight.",
+      "sentiment": "not-assessed",
+      "escalated": false,
+      "timestamp": "2026-08-13T09:47:29.779Z"
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Browser caller",
+      "callSummary": "assistant: Hi. You've reached Observe Insurance. assistant: I'm Sarah. What can I help you with today? user: Can you trace my client? assistant: Sure thing. Could you please provide the phone number or assistant: account ID for your client? user: Phone number is user: plus 1 triple 5 2 3 4 5 6 7 8. assistant: Give me a moment. assistant: Could you repeat the phone number or account ID for me, please? user: Phone number is plus 1 triple 5 2 3 4 5 6 7 8. assistant: Give me a moment.",
+      "sentiment": "not-assessed",
+      "escalated": false,
+      "timestamp": "2026-08-13T09:53:02.381Z"
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Browser caller",
+      "callSummary": "assistant: Hi. You've reached Observe Insurance. assistant: I'm Sarah. What can I help you with today? user: Our phone number is plus 1 triple 5 2 3 4 5 6 7 8. Can you check my recent claim status? assistant: Just a sec. assistant: I couldn't process that number. Could you repeat it for me? user: Plus 1 triple 5 2 3 4 5 6 7 8. assistant: Just a sec. assistant: I'm having trouble with that number. Let me connect you to a human agent assistant: for further assistance.",
+      "sentiment": "not-assessed",
+      "escalated": false,
+      "timestamp": "2026-08-13T09:53:57.861Z"
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Caller inquired about claim status for CLM-55412. Status is 'Under Review,' requiring submission of signed repair estimate and photos of windshield damage. Provided submission options and clarified filing process on website.",
+      "sentiment": "neutral",
+      "escalated": false,
+      "timestamp": 0
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    }
+  ]
+}

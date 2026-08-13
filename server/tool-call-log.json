@@ -1,0 +1,1429 @@
+{
+  "events": [
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "•••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-12T18:07:54.110Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-12T18:07:54.110Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "•••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 1,
+      "timestamp": "2026-08-12T18:08:16.378Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-12T18:08:16.379Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "•••••0042"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "customer_id",
+        "hasRecord": false
+      },
+      "durationMs": 1,
+      "timestamp": "2026-08-12T18:09:10.230Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "begin_tenant_lookup",
+      "arguments": {
+        "identifier": "•••••0042"
+      },
+      "result": {
+        "ok": true,
+        "status": "verification_required",
+        "authenticated": false,
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-12T18:09:10.239Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "•••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-12T18:09:10.246Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "begin_tenant_lookup",
+      "arguments": {
+        "identifier": "•••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "verification_required",
+        "authenticated": false,
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-12T18:09:10.253Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "begin_tenant_lookup",
+      "arguments": {
+        "identifier": "•••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "verification_required",
+        "authenticated": false,
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-12T18:09:18.656Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "•••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-12T18:11:30.444Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-12T18:11:30.445Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "•••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T02:33:31.095Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T02:33:31.097Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "•••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T02:33:47.180Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T02:33:47.181Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "•••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T02:58:17.994Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T02:58:17.995Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "•••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T02:58:26.107Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T02:58:26.110Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••0042"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "customer_id",
+        "hasRecord": false
+      },
+      "durationMs": 1,
+      "timestamp": "2026-08-13T02:59:53.910Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "begin_tenant_lookup",
+      "arguments": {
+        "identifier": "••••••0042"
+      },
+      "result": {
+        "ok": true,
+        "status": "verification_required",
+        "authenticated": false,
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T02:59:53.912Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "verify_tenant_record",
+      "arguments": {
+        "identifier": "••••••0042",
+        "verificationFactor": "••••••••1988"
+      },
+      "result": {
+        "ok": true,
+        "status": "success",
+        "authenticated": true,
+        "hasRecord": true
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T02:59:53.914Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "unknown",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T03:01:27.710Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T03:01:27.720Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T03:01:55.251Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T03:01:55.252Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T03:06:18.187Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T03:06:18.188Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T03:06:36.316Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T03:06:36.317Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T03:07:20.225Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T03:07:20.226Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T03:16:20.565Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T03:16:20.567Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "log_interaction",
+      "arguments": {
+        "tenantId": "observe-insurance",
+        "callerName": "Browser caller",
+        "callSummary": "assistant: Hello. I'm Sarah. assistant: The Observe Insurance AI claims support agent. assistant: I'm here to help wi...",
+        "sentiment": "not-assessed",
+        "escalated": false
+      },
+      "result": {
+        "ok": true,
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T03:19:37.641Z"
+    },
+    {
+      "callId": "manual-normalize-+1 (555) 234-5678",
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 1,
+      "timestamp": "2026-08-13T03:20:29.493Z"
+    },
+    {
+      "callId": "manual-lookup-+1 (555) 234-5678",
+      "tenantId": "observe-insurance",
+      "toolName": "begin_tenant_lookup",
+      "arguments": {
+        "identifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "verification_required",
+        "authenticated": false,
+        "matchingStrategy": "multi_candidate_normalized_match",
+        "candidateCount": 3,
+        "matchedBy": "phone_candidate",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T03:20:29.495Z"
+    },
+    {
+      "callId": "manual-normalize-+15552345678",
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T03:20:29.495Z"
+    },
+    {
+      "callId": "manual-lookup-+15552345678",
+      "tenantId": "observe-insurance",
+      "toolName": "begin_tenant_lookup",
+      "arguments": {
+        "identifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "verification_required",
+        "authenticated": false,
+        "matchingStrategy": "multi_candidate_normalized_match",
+        "candidateCount": 3,
+        "matchedBy": "phone_candidate",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T03:20:29.495Z"
+    },
+    {
+      "callId": "manual-normalize-1 555 234 5678",
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T03:20:29.496Z"
+    },
+    {
+      "callId": "manual-lookup-1 555 234 5678",
+      "tenantId": "observe-insurance",
+      "toolName": "begin_tenant_lookup",
+      "arguments": {
+        "identifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "verification_required",
+        "authenticated": false,
+        "matchingStrategy": "multi_candidate_normalized_match",
+        "candidateCount": 3,
+        "matchedBy": "phone_candidate",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T03:20:29.496Z"
+    },
+    {
+      "callId": "manual-normalize-5552345678",
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T03:20:29.497Z"
+    },
+    {
+      "callId": "manual-lookup-5552345678",
+      "tenantId": "observe-insurance",
+      "toolName": "begin_tenant_lookup",
+      "arguments": {
+        "identifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "verification_required",
+        "authenticated": false,
+        "matchingStrategy": "multi_candidate_normalized_match",
+        "candidateCount": 3,
+        "matchedBy": "phone_candidate",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T03:20:29.497Z"
+    },
+    {
+      "callId": "manual-normalize-plus one, triple five, two three four, five six seven eight",
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T03:20:29.499Z"
+    },
+    {
+      "callId": "manual-lookup-plus one, triple five, two three four, five six seven eight",
+      "tenantId": "observe-insurance",
+      "toolName": "begin_tenant_lookup",
+      "arguments": {
+        "identifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "verification_required",
+        "authenticated": false,
+        "matchingStrategy": "multi_candidate_normalized_match",
+        "candidateCount": 3,
+        "matchedBy": "phone_candidate",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T03:20:29.499Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 1,
+      "timestamp": "2026-08-13T03:23:15.649Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T03:23:15.650Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T03:23:40.215Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T03:23:40.216Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "log_interaction",
+      "arguments": {
+        "tenantId": "observe-insurance",
+        "callerName": "Browser caller",
+        "callSummary": "assistant: Could you please provide your phone number or account ID assistant: associated with your claim? user: Our ...",
+        "sentiment": "not-assessed",
+        "escalated": false
+      },
+      "result": {
+        "ok": true,
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T03:29:09.122Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "log_interaction",
+      "arguments": {
+        "tenantId": "observe-insurance",
+        "callerName": "Browser caller",
+        "callSummary": "assistant: Hello. I'm Sarah. assistant: The Observe Insurance AI claims support agent. assistant: I'm here to help wi...",
+        "sentiment": "not-assessed",
+        "escalated": false
+      },
+      "result": {
+        "ok": true,
+        "hasRecord": false
+      },
+      "durationMs": 1,
+      "timestamp": "2026-08-13T04:02:56.833Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T04:08:14.921Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T04:08:14.922Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T04:08:39.636Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T04:08:39.638Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 1,
+      "timestamp": "2026-08-13T04:09:39.473Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 1,
+      "timestamp": "2026-08-13T04:10:01.528Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T04:10:10.790Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "begin_tenant_lookup",
+      "arguments": {
+        "identifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "verification_required",
+        "authenticated": false,
+        "matchingStrategy": "multi_candidate_normalized_match",
+        "candidateCount": 3,
+        "matchedBy": "phone_candidate",
+        "hasRecord": false
+      },
+      "durationMs": 1,
+      "timestamp": "2026-08-13T04:10:20.808Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T04:11:46.050Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T04:11:46.051Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 1,
+      "timestamp": "2026-08-13T04:12:14.318Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T04:12:14.319Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T04:26:46.844Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T04:26:46.845Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "log_interaction",
+      "arguments": {
+        "tenantId": "observe-insurance",
+        "callerName": "Browser caller",
+        "callSummary": "assistant: The Observe Insurance AI claims support agent. assistant: I'm here to help with your claim or answer a gen...",
+        "sentiment": "not-assessed",
+        "escalated": false
+      },
+      "result": {
+        "ok": true,
+        "hasRecord": false
+      },
+      "durationMs": 1,
+      "timestamp": "2026-08-13T04:30:30.679Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T05:23:26.634Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T05:23:26.636Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T05:26:03.261Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T05:26:03.262Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "log_interaction",
+      "arguments": {
+        "tenantId": "observe-insurance",
+        "callerName": "Browser caller",
+        "callSummary": "assistant: Hello. I'm Sarah. assistant: The Observe Insurance AI claims support agent. assistant: I'm here to help wi...",
+        "sentiment": "not-assessed",
+        "escalated": false
+      },
+      "result": {
+        "ok": true,
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T05:29:06.685Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T05:35:28.138Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T05:35:28.139Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T05:38:08.068Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T05:38:08.070Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T05:44:15.170Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T05:44:15.173Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T06:18:29.597Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T06:18:29.599Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T06:24:25.261Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T06:24:25.263Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T06:27:31.941Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T06:27:31.943Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T06:35:18.675Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T06:35:18.676Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "log_interaction",
+      "arguments": {
+        "tenantId": "observe-insurance",
+        "callerName": "Browser caller",
+        "callSummary": "assistant: Hello. I'm Sarah. assistant: The Observe Insurance AI claims support agent. assistant: I'm here to help wi...",
+        "sentiment": "not-assessed",
+        "escalated": false
+      },
+      "result": {
+        "ok": true,
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T07:27:16.663Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "log_interaction",
+      "arguments": {
+        "tenantId": "observe-insurance",
+        "callerName": "Browser caller",
+        "callSummary": "user: I would like to follow-up on my client status. assistant: I'd be happy to help you with that. assistant: To loo...",
+        "sentiment": "not-assessed",
+        "escalated": false
+      },
+      "result": {
+        "ok": true,
+        "hasRecord": false
+      },
+      "durationMs": 1,
+      "timestamp": "2026-08-13T07:41:27.906Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T08:05:24.086Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T08:05:24.087Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T08:05:46.363Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T08:05:46.365Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "normalize_identifier",
+      "arguments": {
+        "rawIdentifier": "••••••••5678"
+      },
+      "result": {
+        "ok": true,
+        "status": "normalized",
+        "identifierType": "phone",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T08:18:22.744Z"
+    },
+    {
+      "callId": null,
+      "tenantId": "observe-insurance",
+      "toolName": "delete_policy",
+      "arguments": {},
+      "result": {
+        "ok": false,
+        "code": "TOOL_NOT_ALLOWED",
+        "hasRecord": false
+      },
+      "durationMs": 0,
+      "timestamp": "2026-08-13T08:18:22.746Z"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "observe-voice-agent",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["tsx", "watch", "server/_core/index.ts"],
+      "port": 3005,
+      "env": {
+        "NODE_ENV": "development",
+        "PORT": "3005",
+        "VOICE_AGENT_BACKEND_PORT": "8099",
+        "PYTHON_BIN": "/Users/apple/Documents/Observe.ai/.venv/bin/python"
+      }
+    }
+  ]
+}

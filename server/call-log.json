@@ -1,0 +1,256 @@
+{
+  "calls": [
+    {
+      "callId": "CALL-1786553213395",
+      "tenantId": "observe-insurance",
+      "callerName": "Browser caller",
+      "callSummary": "assistant: You've reached the maximum number of verification attempts. assistant: I'm going to mark our interaction for escalation. assistant: You like to speak with a representative now? user: Yes, please. assistant: This will just take a sec. assistant: I've marked our interaction for escalation. assistant: A representative will be in touch with you shortly to assist with your claim status. assistant: Is there anything else I can help you with in the meantime? user: Can you try 1 more time? assistant: I've user: For, uh, the record with assistant: I can try 1 more time. assistant: Can you please provide your phone number or account ID associated with your assistant: claim? user: plus 1 user: triple 5, user: 2, 3, 4, user: 5 6 7 8. assistant: Just a sec. assistant: I've tried verifying your account multiple times,",
+      "sentiment": "not-assessed",
+      "escalated": false,
+      "timestamp": "2026-08-12T16:46:53.395Z"
+    },
+    {
+      "callId": "CALL-1786554306319",
+      "tenantId": "observe-insurance",
+      "callerName": "Browser caller",
+      "callSummary": "assistant: 4 5 6 7 8 9 0. assistant: Alternatively, you can provide your account ID if you have it handy. assistant: Additionally, I'll need your date of birth. assistant: You can provide as the month name assistant: day, and 4 digit year. assistant: For instance, assistant: January 12 19 90. assistant: I'll then confirm these details with you before proceeding. user: My phone number is user: plus 1 user: 5 5 5 user: 2 3 assistant: 1 moment. user: 8. assistant: It seems like the function call was incomplete. assistant: To proceed, I need your full phone number and date of birth. assistant: You've provided plus 1 5 5 5 5 2 3. But it seems like there are a few more digits missing from your phone number. assistant: Could you please complete your phone number by saying the remaining digits individually? assistant: Additionally, could you please provide your date of birth as the month name? assistant: Day, and 4 digit year?",
+      "sentiment": "not-assessed",
+      "escalated": false,
+      "timestamp": "2026-08-12T17:05:06.319Z"
+    },
+    {
+      "callId": "CALL-1786591177640",
+      "tenantId": "observe-insurance",
+      "callerName": "Browser caller",
+      "callSummary": "assistant: Hello. I'm Sarah. assistant: The Observe Insurance AI claims support agent. assistant: I'm here to help with your claim or answer a general question. assistant: How may I support you today? user: I would like to check my client status. assistant: To look up your status, I'll need to verify your identity. Could you please provide your phone number or account ID? user: My phone number is plus 1 5 5 5 2 3 4 5 6 7 8. assistant: This will just take a sec. 1 moment. assistant: Give me a moment. assistant: I apologize, but I'm having trouble verifying your account. assistant: Could you please confirm your phone number or provide your account ID?",
+      "sentiment": "not-assessed",
+      "escalated": false,
+      "timestamp": "2026-08-13T03:19:37.640Z"
+    },
+    {
+      "callId": "CALL-1786591749121",
+      "tenantId": "observe-insurance",
+      "callerName": "Browser caller",
+      "callSummary": "assistant: Could you please provide your phone number or account ID assistant: associated with your claim? user: Our phone number is plus 1 triple 5 2 3 4 5 6 7 8. assistant: 1 moment. assistant: Hold on a sec. assistant: I didn't get a match for your phone number. Could you please confirm if it's correct assistant: or provide your account ID instead? assistant: This will just take a sec. 1 moment. user: My account ID is c u s t hyphen 1 double 0 4 2. assistant: I didn't quite get that. Could you please repeat or re assistant: rephrase your customer ID or phone number? user: My customer ID is c u s t hyphen 1 0 0 4 2. assistant: Just a sec. assistant: This will just take a sec. 1 moment. Hold on a sec. assistant: I apologize, but I'm having trouble verifying your account. assistant: Would you like to try again or speak with a representative? user: I would like to speak with a representative. assistant: Hold on a sec. assistant: I'm going to escalate your call to a human representative. assistant: Please hold for just a moment.",
+      "sentiment": "not-assessed",
+      "escalated": false,
+      "timestamp": "2026-08-13T03:29:09.121Z"
+    },
+    {
+      "callId": "CALL-1786593776832",
+      "tenantId": "observe-insurance",
+      "callerName": "Browser caller",
+      "callSummary": "assistant: Hello. I'm Sarah. assistant: The Observe Insurance AI claims support agent. assistant: I'm here to help with your claim or answer a general question. assistant: How may I support you today? user: I would like to check my claim status. assistant: To look up your claim, I'll need to verify your identity. assistant: Could you please provide your phone number or account ID associated with your claim? user: Our phone number is plus 1 triple 5 2 3 4 5 6 7 8. assistant: This will just take a sec. Just a sec. assistant: Just a sec. assistant: I apologize, but I didn't receive the normalized identifier. assistant: Could you please repeat your phone number or account ID so I can try again? assistant: Just a sec. user: My customer ID is c u s t hyphen 1 double 0 4 2. assistant: I didn't quite get your account ID or phone number. assistant: Could you please try again or provide more details?",
+      "sentiment": "not-assessed",
+      "escalated": false,
+      "timestamp": "2026-08-13T04:02:56.832Z"
+    },
+    {
+      "callId": "CALL-1786595430677",
+      "tenantId": "observe-insurance",
+      "callerName": "Browser caller",
+      "callSummary": "assistant: The Observe Insurance AI claims support agent. assistant: I'm here to help with your claim or answer a general question. assistant: How may I support you today? user: I would like to check my claim status. assistant: To look up your claim status, I'll need to verify assistant: your identity. Could you please provide your phone number or account ID? user: My phone number is plus 1, triple 5, 2 3 4 5 6 7 8. assistant: Give me a moment. Just a sec. assistant: 1 moment. assistant: I apologize, but I'm having trouble understanding your phone number. Could you please assistant: try again or provide your account ID instead? user: My account ID is c u s t hyphen 1 double 0 4 2. assistant: Give me a moment. Just a sec. 1 moment. assistant: Let's try again. Can you please provide your account ID in a different format? assistant: Such as cussed minus 10042 or cussed on 0 0 4 2? user: Just minus 1 0 0 4 2. assistant: Just a sec. assistant: 1 moment. 1 moment. assistant: Just a sec. assistant: Just a sec.",
+      "sentiment": "not-assessed",
+      "escalated": false,
+      "timestamp": "2026-08-13T04:30:30.677Z"
+    },
+    {
+      "callId": "CALL-1786598946684",
+      "tenantId": "observe-insurance",
+      "callerName": "Browser caller",
+      "callSummary": "assistant: Hello. I'm Sarah. assistant: The Observe Insurance AI claims support agent. assistant: I'm here to help with your claim or answer a general question. assistant: How may I support you today? user: Check my claim status. assistant: To check on your claim status, assistant: I'll need to look up your account. Could you please provide me with your assistant: phone number or account ID? user: My phone number is user: plus 1 triple 5 2 3 4 5 6 7 8. assistant: Hold on a sec. Just a sec. assistant: I apologize, but I didn't receive the expected response to proceed with your claim status check. assistant: Could you please confirm your phone number or provide your account ID?",
+      "sentiment": "not-assessed",
+      "escalated": false,
+      "timestamp": "2026-08-13T05:29:06.684Z"
+    },
+    {
+      "callId": "CALL-1786606036662",
+      "tenantId": "observe-insurance",
+      "callerName": "Browser caller",
+      "callSummary": "assistant: Hello. I'm Sarah. assistant: The Observe Insurance AI claims support agent. assistant: I'm here to help with your claim or answer a general question. assistant: How may I support you today? user: I would like to check my client status. assistant: To look up your status, I'll need to verify your identity. assistant: Could you please provide your phone number or account ID? user: Our phone number is plus 1 triple 5 2 3 4 5 6 7 8. assistant: Just a sec. Just a sec. assistant: Just a sec. assistant: I apologize, but I didn't receive the normalized identifier. assistant: Could you please try again or provide your account ID instead? user: My account ID is c u s t user: minus 1 double 0 4 2. assistant: Just a sec. 1 moment. This will just take a sec. assistant: Give me a moment. This will just take a sec. assistant: I'm having trouble verifying your account. Would you like",
+      "sentiment": "not-assessed",
+      "escalated": false,
+      "timestamp": "2026-08-13T07:27:16.662Z"
+    },
+    {
+      "callId": "CALL-1786606887906",
+      "tenantId": "observe-insurance",
+      "callerName": "Browser caller",
+      "callSummary": "user: I would like to follow-up on my client status. assistant: I'd be happy to help you with that. assistant: To look up your information, could you please provide me with your phone number or a account ID? user: Yep. My phone number is plus 1 triple 5. assistant: Hold on a sec. assistant: I didn't quite get your full phone number. assistant: Could you please provide the rest of the digits or your account ID if you have 1? I'll make sure to get it exactly right for you. user: My phone number is user: plus 1 triple 5 2 3 4 5 6 7 8. assistant: Give me a moment. assistant: Give me a moment. assistant: Just a sec. assistant: I apologize, but I'm having a bit of trouble locating your account. assistant: Could you please confirm your phone number or provide an account ID if you have 1? I'll do my best to assist you further. user: Our phone number is plus 1 triple 5 2 3 4 5 6 7 8. assistant: Hold on a sec. assistant: Just a sec. assistant: Just a sec. assistant: I'm having a bit of trouble locating your account. Could you please assistant: provide your account ID or confirm your phone number again?",
+      "sentiment": "not-assessed",
+      "escalated": false,
+      "timestamp": "2026-08-13T07:41:27.906Z"
+    },
+    {
+      "callId": "CALL-1786609433373",
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "callId": "CALL-1786609532804",
+      "tenantId": "observe-insurance",
+      "callerName": "Consolidation check",
+      "callSummary": "Verified single write path.",
+      "sentiment": "neutral",
+      "escalated": false,
+      "timestamp": "2026-08-13T08:25:32.795Z"
+    },
+    {
+      "callId": "CALL-1786609545277",
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "callId": "CALL-1786612336778",
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "callId": "CALL-1786613133495",
+      "tenantId": "observe-insurance",
+      "callerName": "Browser caller",
+      "callSummary": "assistant: Hello. I'm Sarah. assistant: The Observe Insurance AI claims support agent. assistant: I'm here to help with your claim or answer a general question. assistant: How may I support you today? user: Can you help me with my client status? assistant: I'd be happy to help you with your client status. assistant: To look up your information, could you please tell me your phone number or account ID? user: Our phone number is plus 1 triple 5 2 3 4 5 6 7 8. assistant: Just a sec. Give me a moment. assistant: I've located your account. To verify your identity, could you please tell me your date of birth? user: It's November 20 19 88. assistant: Give me a moment. assistant: 1 moment. assistant: I'm having a bit of trouble verifying your date of birth. assistant: Could you please repeat your date of birth, including the month, day, and year? user: November 20 19 88. assistant: 1 moment. assistant: This will just take a sec. assistant: I'm having a bit of trouble verifying your date of birth. assistant: Could you please repeat your date of birth, month, day, and year?",
+      "sentiment": "not-assessed",
+      "escalated": false,
+      "timestamp": "2026-08-13T09:25:33.476Z"
+    },
+    {
+      "callId": "CALL-1786613348356",
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "callId": "CALL-1786613543131",
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "callId": "CALL-1786613598436",
+      "tenantId": "observe-insurance",
+      "callerName": "Browser caller",
+      "callSummary": "assistant: Hi. You've reached Observe Insurance. assistant: I'm Sarah. What can I help you with today? user: I need help checking my recent claim status. assistant: 1 moment. assistant: To check your claim status, I need your phone number or account ID. assistant: Can you please provide that? user: My phone number is user: plus 1 triple 5 2 3 4 5 6 7 8. assistant: Give me a moment. assistant: Hold on a sec. assistant: Let's try again. Can you please repeat your phone number or account ID? user: Phone number is plus 1 triple 5, 2 3 4 5 6 7 8. assistant: 1 moment. assistant: This will just take a sec. assistant: Let's try again. Can you please repeat your phone number or account ID?",
+      "sentiment": "not-assessed",
+      "escalated": false,
+      "timestamp": "2026-08-13T09:33:18.416Z"
+    },
+    {
+      "callId": "CALL-1786613728227",
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "callId": "CALL-1786613762384",
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "callId": "CALL-1786614298639",
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "callId": "CALL-1786614449794",
+      "tenantId": "observe-insurance",
+      "callerName": "Browser caller",
+      "callSummary": "assistant: Hi. You've reached Observe Insurance. assistant: I'm Sarah. What can I help you with today? user: Can you help trace my recent claim? assistant: Absolutely. assistant: Could you please provide your phone number or account ID? user: My phone number is user: plus 1 triple 5 user: 2 3 4 5 6 7 8. assistant: 1 moment. assistant: Could you please repeat your phone number or account ID for me? user: My phone number is plus 1 triple 5 2 3 4 5 6 7 8. assistant: Give me a moment. assistant: It seems there's an issue with the system processing your phone number. assistant: Let me connect you to a human agent for further assistance. Hang tight.",
+      "sentiment": "not-assessed",
+      "escalated": false,
+      "timestamp": "2026-08-13T09:47:29.779Z"
+    },
+    {
+      "callId": "CALL-1786614657644",
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "callId": "CALL-1786614782396",
+      "tenantId": "observe-insurance",
+      "callerName": "Browser caller",
+      "callSummary": "assistant: Hi. You've reached Observe Insurance. assistant: I'm Sarah. What can I help you with today? user: Can you trace my client? assistant: Sure thing. Could you please provide the phone number or assistant: account ID for your client? user: Phone number is user: plus 1 triple 5 2 3 4 5 6 7 8. assistant: Give me a moment. assistant: Could you repeat the phone number or account ID for me, please? user: Phone number is plus 1 triple 5 2 3 4 5 6 7 8. assistant: Give me a moment.",
+      "sentiment": "not-assessed",
+      "escalated": false,
+      "timestamp": "2026-08-13T09:53:02.381Z"
+    },
+    {
+      "callId": "CALL-1786614837879",
+      "tenantId": "observe-insurance",
+      "callerName": "Browser caller",
+      "callSummary": "assistant: Hi. You've reached Observe Insurance. assistant: I'm Sarah. What can I help you with today? user: Our phone number is plus 1 triple 5 2 3 4 5 6 7 8. Can you check my recent claim status? assistant: Just a sec. assistant: I couldn't process that number. Could you repeat it for me? user: Plus 1 triple 5 2 3 4 5 6 7 8. assistant: Just a sec. assistant: I'm having trouble with that number. Let me connect you to a human agent assistant: for further assistance.",
+      "sentiment": "not-assessed",
+      "escalated": false,
+      "timestamp": "2026-08-13T09:53:57.861Z"
+    },
+    {
+      "callId": "CALL-1786615101422",
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "callId": "CALL-1786615846424",
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Caller inquired about claim status for CLM-55412. Status is 'Under Review,' requiring submission of signed repair estimate and photos of windshield damage. Provided submission options and clarified filing process on website.",
+      "sentiment": "neutral",
+      "escalated": false,
+      "timestamp": 0
+    },
+    {
+      "callId": "CALL-1786616959538",
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    },
+    {
+      "callId": "CALL-1786617011689",
+      "tenantId": "observe-insurance",
+      "callerName": "Eleanor Vance",
+      "callSummary": "Escalated to human agent. Callback scheduled within two hours.",
+      "sentiment": "neutral",
+      "escalated": true,
+      "timestamp": 1786595225
+    }
+  ]
+}

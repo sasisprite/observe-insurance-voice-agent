@@ -387,3 +387,9 @@ To onboard another voice provider, implement the provider contract in `backend/p
 ## References
 
 The implementation is self-contained in this repository. The principal configuration and runtime references are [`config.yaml`](config.yaml), [`backend/providers/base.py`](backend/providers/base.py), [`backend/providers/vapi.py`](backend/providers/vapi.py), [`backend/app/server.py`](backend/app/server.py), [`backend/app/repository.py`](backend/app/repository.py), [`backend/app/sql_repository.py`](backend/app/sql_repository.py), [`scripts/provisionVapi.mjs`](scripts/provisionVapi.mjs), and [`docs/voice-agent-workflow.mmd`](docs/voice-agent-workflow.mmd).
+
+## Synthetic conversation demo assets
+
+The repository includes a demo-safe, aligned conversation under [`docs/demo-assets/CONVERSATION.md`](docs/demo-assets/CONVERSATION.md). It provides eight separate generated voice clips, one per transcript turn, plus [`conversation.json`](docs/demo-assets/conversation.json) as the machine-readable ordering contract. Sarah uses the `Aoede` voice and the caller uses the `Achird` voice. These recordings are synthetic and contain no real customer audio.
+
+The sequence intentionally includes a phone lookup, a date-of-birth verification using a shortened-year utterance, a claim-status response, and a follow-up question. During the interview, explain that the clips demonstrate the presentation layer only: canonical interaction logging, tenant-scoped identity, tool execution, idempotency, escalation, metrics, and final call outcome remain backend responsibilities.

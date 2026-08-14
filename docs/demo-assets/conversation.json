@@ -1,0 +1,19 @@
+{
+  "id": "synthetic-claim-status-001",
+  "purpose": "Demo-safe synthetic conversation for the Voice Agent interview walkthrough.",
+  "synthetic": true,
+  "speaker_voices": {
+    "Sarah": "Aoede",
+    "Caller": "Achird"
+  },
+  "turns": [
+    {"sequence": 1, "speaker": "Sarah", "text": "Hi, you've reached Observe Insurance. I'm Sarah. What can I help you with today?", "audio": "audio/sarah-01.wav"},
+    {"sequence": 2, "speaker": "Caller", "text": "I'd like to check my recent claim status.", "audio": "audio/caller-02.wav"},
+    {"sequence": 3, "speaker": "Sarah", "text": "I can help with that. Please share the phone number associated with your policy.", "audio": "audio/sarah-03.wav"},
+    {"sequence": 4, "speaker": "Caller", "text": "My phone number is plus one, five five five, two three four, five six seven eight.", "audio": "audio/caller-04.wav"},
+    {"sequence": 5, "speaker": "Sarah", "text": "Thanks, Eleanor. To protect your privacy, could you please verify your date of birth?", "audio": "audio/sarah-05.wav"},
+    {"sequence": 6, "speaker": "Caller", "text": "My date of birth is November twentieth, eighty-eight.", "audio": "audio/caller-06.wav"},
+    {"sequence": 7, "speaker": "Sarah", "text": "Your claim is currently under review. The next step is document verification. Please submit the signed repair estimate and photos of the windshield damage.", "audio": "audio/sarah-07.wav"},
+    {"sequence": 8, "speaker": "Caller", "text": "What documents do I need to submit?", "audio": "audio/caller-08.wav"}
+  ]
+}

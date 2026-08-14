@@ -29,6 +29,64 @@ Sarah asks for a phone number or customer identifier, normalizes the spoken valu
 
 The call remains open when the caller asks a useful follow-up. When the caller clearly says they are finished, Sarah gives the configured goodbye and Vapi ends the call. If the caller becomes silent or an integration stops making progress, the bounded inactivity and timeout policies prevent an indefinite connection.
 
+## Product screenshots and sample run
+
+The following screenshots show the submitted platform surface using the local demonstration build. They contain only fixture data and configuration labels; no production credentials or private customer records are included.
+
+### Voice-agent workspace
+
+![Voice Agent workspace](docs/screenshots/voice-agent-home.png)
+
+The voice-agent workspace presents Sarah’s purpose, call controls, transcript area, and the session status surface. During a live call, the transcript panel shows the caller and Sarah turns, while the tool-activity panel shows the normalized tool requests and results received through Vapi client messages.
+
+### Tenant-admin login
+
+![Tenant admin login](docs/screenshots/tenant-admin-login.png)
+
+The tenant-admin route is available at `/admin`. The local demonstration credentials are `admin` / `admin`; these are not production credentials and must be replaced before deployment. After login, an authorized tenant administrator can configure the agent prompt, first message, runtime settings, enabled tools, and configuration version.
+
+### Representative conversation
+
+The following is the deterministic demo scenario used for end-to-end verification:
+
+```text
+Sarah: Hi, you've reached Observe Insurance — I'm Sarah. What can I help you with today?
+You: My phone number is plus one, five five five, two three four, five six seven eight.
+Sarah: Thanks, Eleanor Vance. Could you please verify your date of birth?
+You: My date of birth is November 20, '88.
+Sarah: Your claim is currently under review. The next step is to submit the signed repair estimate and photos of the windshield damage.
+You: What documents do I need to submit?
+Sarah: You need the signed repair estimate and photos of the windshield damage.
+You: No, that's all.
+Sarah: Thanks for calling Observe Insurance. Have a great day.
+[Call ends and the backend finalizes the outcome.]
+```
+
+The shortened year is intentionally included in the scenario. The backend normalizes `November 20, '88` to `1988-11-20` before comparing it with the verified fixture record.
+
+### Expected tool activity
+
+The browser-visible tool activity is expected to show the following progression. The backend event ledger receives the corresponding provider and tool events independently.
+
+```text
+normalize_identifier
+  input: "plus one, five five five, two three four, five six seven eight"
+  result: { ok: true, normalizedIdentifier: "+15552345678" }
+
+begin_tenant_lookup
+  input: { identifier: "+15552345678" }
+  result: { status: "verification_required", customerId: "CUST-10042" }
+
+verify_tenant_record
+  input: { identifier: "+15552345678", verificationFactor: "November 20, '88" }
+  result: { status: "success", authenticated: true, customerId: "CUST-10042", claimId: "CLM-55412" }
+
+end-of-call-report
+  result: { outcome: "completed", customerId: "CUST-10042", claimId: "CLM-55412" }
+```
+
+The final outcome is backend-owned. The browser displays live transcript and tool activity, but it does not create the authoritative interaction log.
+
 ## Technology stack
 
 | Layer | Technology | Role |

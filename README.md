@@ -51,11 +51,12 @@ The following snapshots show the product progression from the initial voice-supp
 
 ### Product walkthrough
 
-GitHub README pages do not render arbitrary iframe embeds as inline video players. The walkthrough is presented as a clickable video thumbnail that opens the Loom recording directly.
+The complete product walkthrough is included below as a repository-hosted MP4. Use the controls to play, pause, mute, or expand the demonstration.
 
-[![Watch the Observe Insurance product walkthrough](docs/screenshots/product-active-conversation.webp)](https://www.loom.com/share/19a530b54d794abeae883ec12314e1de)
-
-[Open the walkthrough in Loom](https://www.loom.com/share/19a530b54d794abeae883ec12314e1de)
+<video controls width="100%" preload="metadata" poster="https://raw.githubusercontent.com/sasisprite/observe-insurance-voice-agent/main/docs/screenshots/product-active-conversation.webp">
+  <source src="https://raw.githubusercontent.com/sasisprite/observe-insurance-voice-agent/main/docs/assets/check-claim-status-and-upload-documents.mp4" type="video/mp4">
+  Your browser does not support embedded video. [Open the MP4 directly](docs/assets/check-claim-status-and-upload-documents.mp4).
+</video>
 ### Representative conversation
 
 The following is the deterministic demo scenario used for end-to-end verification:

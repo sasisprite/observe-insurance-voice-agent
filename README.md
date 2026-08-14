@@ -33,18 +33,6 @@ The call remains open when the caller asks a useful follow-up. When the caller c
 
 The following screenshots show the submitted platform surface using the local demonstration build. They contain only fixture data and configuration labels; no production credentials or private customer records are included.
 
-### Voice-agent workspace
-
-![Voice Agent workspace](docs/screenshots/voice-agent-home.png)
-
-The voice-agent workspace presents Sarah’s purpose, call controls, transcript area, and the session status surface. During a live call, the transcript panel shows the caller and Sarah turns, while the tool-activity panel shows the normalized tool requests and results received through Vapi client messages.
-
-### Tenant-admin login
-
-![Tenant admin login](docs/screenshots/tenant-admin-login.png)
-
-The tenant-admin route is available at `/admin`. The local demonstration credentials are `admin` / `admin`; these are not production credentials and must be replaced before deployment. After login, an authorized tenant administrator can configure the agent prompt, first message, runtime settings, enabled tools, and configuration version.
-
 ### Product-view gallery
 
 The following snapshots show the product progression from the initial voice-support landing state through an active Sarah conversation and a claim-status response. All examples use synthetic fixture data for demonstration purposes.
@@ -63,11 +51,11 @@ The following snapshots show the product progression from the initial voice-supp
 
 ### Product walkthrough
 
-The complete product walkthrough is available in the embedded Loom recording below.
+GitHub README pages do not render arbitrary iframe embeds as inline video players. The walkthrough is presented as a clickable video thumbnail that opens the Loom recording directly.
 
-<div style="position: relative; padding-bottom: 51.354166666666664%; height: 0; overflow: hidden;">
-  <iframe src="https://www.loom.com/embed/19a530b54d794abeae883ec12314e1de" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-</div>
+[![Watch the Observe Insurance product walkthrough](docs/screenshots/product-active-conversation.webp)](https://www.loom.com/share/19a530b54d794abeae883ec12314e1de)
+
+[Open the walkthrough in Loom](https://www.loom.com/share/19a530b54d794abeae883ec12314e1de)
 ### Representative conversation
 
 The following is the deterministic demo scenario used for end-to-end verification:

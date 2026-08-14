@@ -45,6 +45,29 @@ The voice-agent workspace presents Sarah’s purpose, call controls, transcript 
 
 The tenant-admin route is available at `/admin`. The local demonstration credentials are `admin` / `admin`; these are not production credentials and must be replaced before deployment. After login, an authorized tenant administrator can configure the agent prompt, first message, runtime settings, enabled tools, and configuration version.
 
+### Product-view gallery
+
+The following snapshots show the product progression from the initial voice-support landing state through an active Sarah conversation and a claim-status response. All examples use synthetic fixture data for demonstration purposes.
+
+![Observe Insurance landing view](docs/screenshots/product-landing-empty.webp)
+
+*Initial product view: Sarah is available and the caller can begin a browser-based voice session.*
+
+![Active Sarah conversation](docs/screenshots/product-active-conversation.webp)
+
+*Active conversation view: transcript turns and backend-driven tool activity are visible together.*
+
+![Claim-status conversation](docs/screenshots/product-claim-status.webp)
+
+*Claim-status view: Sarah explains the next action while the tool activity panel records the lookup and verification steps.*
+
+### Product walkthrough
+
+The complete product walkthrough is available in the embedded Loom recording below.
+
+<div style="position: relative; padding-bottom: 51.354166666666664%; height: 0; overflow: hidden;">
+  <iframe src="https://www.loom.com/embed/19a530b54d794abeae883ec12314e1de" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
 ### Representative conversation
 
 The following is the deterministic demo scenario used for end-to-end verification:

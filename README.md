@@ -51,12 +51,11 @@ The following snapshots show the product progression from the initial voice-supp
 
 ### Product walkthrough
 
-The complete product walkthrough is included below as a repository-hosted MP4. Use the controls to play, pause, mute, or expand the demonstration.
+GitHub does not render repository-hosted HTML5 video players reliably inside README pages. The walkthrough is therefore shown below as an inline animated preview. Click the preview to open and play the complete MP4 recording.
 
-<video controls width="100%" preload="metadata" poster="https://raw.githubusercontent.com/sasisprite/observe-insurance-voice-agent/main/docs/screenshots/product-active-conversation.webp">
-  <source src="https://raw.githubusercontent.com/sasisprite/observe-insurance-voice-agent/main/docs/assets/check-claim-status-and-upload-documents.mp4" type="video/mp4">
-  Your browser does not support embedded video. [Open the MP4 directly](docs/assets/check-claim-status-and-upload-documents.mp4).
-</video>
+[![Watch the product walkthrough](docs/assets/product-walkthrough-preview.gif)](https://raw.githubusercontent.com/sasisprite/observe-insurance-voice-agent/main/docs/assets/check-claim-status-and-upload-documents.mp4)
+
+[Open the complete MP4 walkthrough](https://raw.githubusercontent.com/sasisprite/observe-insurance-voice-agent/main/docs/assets/check-claim-status-and-upload-documents.mp4)
 ### Representative conversation
 
 The following is the deterministic demo scenario used for end-to-end verification:
